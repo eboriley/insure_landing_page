@@ -1,0 +1,200 @@
+@import 'nav';
+
+@include media-lg{
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding:1rem 7rem ;
+}
+
+.humburger{
+    visibility: hidden;
+}
+    
+.nav_item{
+    height: 0;
+    flex-direction: row;
+    position: none;
+    transform: translateY(0);
+    background-image: none;
+    background: none;
+    position: relative;
+    top: 0;
+    justify-content: flex-end;
+
+    .nav_item-link{
+        margin: 0 1rem;
+        text-transform: uppercase;
+        font-family: $font-body;
+        color: hsl(273, 4%, 51%);
+        font-size: .8rem;
+        font-weight: 700;
+        transform: translateX(0);
+        padding: 1rem 0;
+        transition: 1000ms color ease-in-out;
+
+        &:hover{
+            color:  hsl(270, 9%, 17%);
+            cursor: pointer;
+        }
+
+    }
+}
+
+.header_info{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    height: 700px;
+    width: 100%;
+    background-image: url("../images/bg-pattern-intro-left-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 170px;
+    background-position: left  bottom 30px;
+
+.header_info-image{
+    position: absolute;
+    z-index: 100;
+    right: 8rem;
+    top: 3.5rem;
+        .intro-img{
+            width: 100%;
+           
+        }
+    }
+
+    .info_container{
+        background-color:  hsl(270, 9%, 17%);
+        background-image: url("../images/bg-pattern-intro-left-desktop.svg"),
+        url("../images/bg-pattern-intro-right-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom -230px left 6px,
+         right  top -50px;
+        width: 100%;
+        height: 60%;
+        display: flex;
+        position: absolute;
+        padding: 0 0 0 5rem;
+        top: 0;
+
+        .header_info-text{
+            justify-content: start;
+            align-items: flex-start;
+            background: none;
+            background-image: none;
+            text-align: left;
+            width: 40%;
+            h1{
+                font-size: 2.5rem;
+                line-break: auto;
+            }
+            p{
+                font-size: 1rem;
+            }
+    
+    
+            &::before{
+                content: '';
+                border-top: 1px solid #fff;
+                height: 1px;
+                position: absolute;
+                width: 20%;
+            }
+        }
+    }
+   
+}
+
+.section_1{
+    padding: 0 5rem;
+}
+.how_we_work{
+    background-image: none;
+    padding: 0 1.5rem 5rem;
+}
+
+.we_diff{
+    text-align: left;
+
+    &::before{
+        left: 0;
+        right: auto;
+        width: 10%;
+    }
+}
+
+.how_we_work-boxes{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.section_2{
+    padding: 0 5rem;
+}
+.find_out{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center; 
+    background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+
+    button:hover{
+        background-color: #fff;
+        color: hsl(270, 9%, 17%);
+    }
+}
+
+footer{
+    margin-top: 10rem;
+    padding: 0 5rem;
+    background-color: hsl(0, 0%, 98%);
+    background-image: url("../images/bg-pattern-footer-desktop.svg");
+    background-size: 400px;
+    background-position: top left;
+}
+
+.insure{
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+
+    &::after{
+        width: 96%;
+    }
+
+    .social_icons{
+        
+        svg{
+            margin: 0 .2rem;
+        }
+
+        svg path{
+            transition: 250ms fill ease-out;
+            &:hover{
+                fill: hsl(270, 9%, 17%) !important;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.about_us{
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 1.8rem;
+    .about_us-item{
+        justify-content: start;
+        align-items: flex-start;
+        p{
+            text-align: left;
+        }
+        ul{
+            text-align: left;
+        }
+    }
+}
+
+
+}

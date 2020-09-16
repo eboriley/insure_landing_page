@@ -1,0 +1,112 @@
+
+
+.nav{
+    padding: 1.5rem;
+}
+
+.navbar{
+    display: flex;
+    align-items: center ;
+    position: relative;
+    z-index: 10;
+    .logo{
+        height: 1rem;
+    }
+
+
+    .humburger{
+        width: 30px;
+        height: 30px;
+        border: 2px solid hsl(256, 26%, 20%);
+        position: absolute;
+        right: 0;
+
+        .burger{
+            height: 1px;
+            border: 1px solid hsl(256, 26%, 20%);
+            position: relative;
+            top: 10.5px;
+            left: 5px;
+            width: 60%;
+        }
+
+        .burger::before{
+            content: '';
+            width: 100%;
+            position: absolute;
+            top: -7px;
+            right: -0.05rem;
+            border: 1px solid hsl(256, 26%, 20%);
+            transition: 250ms ease-in;
+        }
+        .burger::after{
+            content: '';
+            width: 100%;
+            position: absolute;
+            bottom: -7px;
+            right: -0.05rem;
+            border: 1px solid hsl(256, 26%, 20%);
+            transition: 250ms ease-in;
+        }
+
+    }
+
+    .humburger.open{
+       
+        .burger{
+            border: transparent;
+        }
+
+        .burger::before{
+            transform: rotate(45deg);
+            top: 0;
+        }
+        .burger::after{
+            transform: rotate(135deg);
+            bottom: -1px;
+        }
+    }
+       
+}
+
+.nav_item{
+    height: 80vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 1rem;
+    background: hsl(270, 9%, 17%);
+    padding: 1rem 0 ;
+    background-image: url("../images/bg-pattern-mobile-nav.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transform: translateY(-100vh);
+    transition: 400ms ease-in-out 250ms;
+    
+    .nav_item-link{
+    text-transform: uppercase;
+    font-family: $font-body;
+    color: #fff;
+    padding: 1rem 5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    transform: translateX(300%);
+    transition: 250ms ease-in 500ms;
+    }
+    
+}
+
+.nav_item.open{
+        transform: translateY(0);
+        p{
+            transform: translateX(0);
+        }
+        
+        p:hover{
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+    }

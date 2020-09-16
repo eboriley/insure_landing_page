@@ -1,0 +1,216 @@
+@import 'config';
+@import 'nav';
+
+
+
+.header_info-image{
+    .intro-img{
+        width: 100%;
+    }
+}
+
+    .header_info-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: hsl(270, 9%, 17%);
+        padding: 4rem 2rem;
+        color: #fff;
+        font-family: $font-body;
+        text-align: center;
+        position: relative;
+        top: -1vh;
+        background-image: url("../images/bg-pattern-intro-right-mobile.svg"),
+        url("../images/bg-pattern-intro-left-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: 150px;
+        background-position: bottom -270px right,
+        top left;
+
+        h1{
+            font-size: 3.1rem;
+            padding: .8rem 0;
+        }
+        p{
+            font-size: 1.3rem;
+            padding: .8rem 0;
+        }
+        #view-plans{
+        border: 1px solid #fff;
+        background:  hsl(270, 9%, 17%);
+        color: #fff;
+        font-size: 1rem;
+        text-transform: uppercase;
+        height: 40px;
+        width: 150px;
+        font-family: $font-body;
+        font-weight: 700;
+        transition: 250ms background ease-out;
+
+            &:hover{
+                cursor: pointer;
+                background: #fff;
+                color: hsl(270, 9%, 17%);
+            }
+        }
+    }
+
+
+.how_we_work{
+    padding: 5rem 1.5rem;
+    position: relative;
+    top: -1vh;
+    background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 160px;
+    background-position: right -7px top;
+}
+
+.we_diff{
+    margin-top: 2rem;
+    text-align: center;
+    color: hsl(270, 9%, 17%);
+    font-size: 3rem;
+    position: relative;
+
+    &::before{
+        content: '';
+        width: 40%;
+        height: .6rem;
+        position: absolute;
+        border-top: .015rem solid hsl(270, 9%, 17%);
+        left: 0;
+        right: 0;
+        top: -1.5rem;
+        margin: auto;
+    }
+}
+
+.how_we_work-boxes{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .how_we_work-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: .5rem 0;
+        padding: 2rem 2rem;
+
+        img{
+            width: 4rem;
+            padding: .4rem 0;
+        }
+
+        h1{
+            padding: .4rem 0;
+            color: hsl(270, 9%, 17%);
+        }
+        p{
+            padding: .4rem 0;
+            font-weight: 400;
+            color: hsl(273, 4%, 51%);
+            line-height: 1.3rem;
+        }
+    }
+}
+
+.find_out{
+    background:  hsl(270, 9%, 17%);
+    background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right top;
+    padding: 4rem 2rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    font-family: $font-heading;
+    button{
+        border: 1px solid #fff;
+        background:  hsl(270, 9%, 17%);
+        color: #fff;
+        font-size: 1rem;
+        text-transform: uppercase;
+        height: 40px;
+        width: 150px;
+        font-family: $font-body;
+        font-weight: 700;
+        transition: 250ms background ease-out;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+footer{
+    background-image: url("../images/bg-pattern-footer-mobile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.insure{
+    margin-top: 4rem;
+    padding: 4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    img{
+        padding: .7rem 0;
+    }
+
+    .social_icons{
+        padding: .7rem 0;
+        img{
+            padding: 0 .3rem;
+        }
+    }
+
+    &::after{
+        content: '';
+        border-top: 1px solid hsl(273, 4%, 51%);
+        height: 1px;
+        position: absolute;
+        width: 60%;
+        bottom: 0;
+    }
+}
+
+.about_us{
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+
+    .about_us-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p{
+            padding: .9rem 0;
+            text-transform: uppercase;
+            color:  hsl(273, 4%, 51%);
+        }
+
+        ul{
+            list-style: none;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-family: $font-body;
+            font-size: .8rem;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+    
+
+@import 'responsive';
